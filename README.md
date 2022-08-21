@@ -1,5 +1,8 @@
 # Classification Project
 ## Objective 
+> Analyze dataset featuring customer details of a telecummunications company
+Utilize statistical models to aid in analysis and prodcution of actionable insights
+Construct .....
 
 ## Business Goals
 > Find drivers for customer churn at Telco. Why are customers churning?</br>
@@ -21,11 +24,11 @@ Construct a ML classification model that accurately predicts customer churn.</br
 |Feature|Datatype|Definition|
 |:-----|:-----|:-----|
 customer_id                           | 4225 non-null   object |
-gender                                |4225 non-null   object |
+gender                                |4225 non-null   object | customer gender (female:1, male:2)
 senior_citizen                        | 4225 non-null   int64  |
 partner                               | 4225 non-null   object |
 dependents                            | 4225 non-null   object |
-tenure                                 |4225 non-null   int64  |
+tenure                                 |4225 non-null   int64  | customer tenure in months
 phone_service                          |4225 non-null   object |
 multiple_lines                         |4225 non-null   object |
 online_security                        |4225 non-null   object |
@@ -70,6 +73,9 @@ streaming_movies_No internet service  | 4225 non-null   uint8  |
 streaming_movies_Yes                  |  4225 non-null   uint8  |
 
 ## Initial Questions and Hypotheses
+> What differientiates a customer that has churned from those that have not?  
+
+> Is churn more likely to be affected by price or service? Is it some combination of the two?
 
 ## Pipeline Walkthrough
 ### Plan
@@ -84,11 +90,26 @@ Export chosen model predictions concatenated with customer_id and export csv
 Tidy up repository and notebooks for sharing and presentation  
 
 ### Acquire
-> asdflkj;af
+> Acquire the `telco` dataset from the Code Up database  
+> In addition to customer demographic data using:
+- Contract type, payment method, and internet service type  
+> Read into `pd.DataFrame` for further preparation
+
 ### Prepare
-> asdflkj;af
+> Utlize takeways from Acquire phase to inform prepare decisions  
+> Quickly explore the data for initial findings and document
+> Crafted functions to **clean** up data for Explore and Model phases
+* `prep_telco`, `final_prep`, `split_data` --> prepare.py
+
+### Explore
+> Univariate: 
+* Basic histograms for categories, disregarding encoded columns in dataframe for now
+* 
+
 ### Model
+
 > asdflkj;af
+
 ### Deliver
 > asdflkj;af
 
