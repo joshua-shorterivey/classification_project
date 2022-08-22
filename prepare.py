@@ -47,14 +47,16 @@ def final_prep(df):
     """
     
     # drop columns that have been encoded/dummied
-    df = df.drop(columns=['contract_type', 'payment_type', 'internet_service_type', 'multiple_lines', \
-                        'online_security', 'online_backup', 'device_protection','tech_support',\
-                        'streaming_tv','streaming_movies'])
+    #df = df.drop(columns=['gender', 'senior_citizen', 'partner', 'dependents', 'phone'contract_type', 'payment_type', 'internet_service_type', 'multiple_lines', \
+    #                    'online_security', 'online_backup', 'device_protection','tech_support',\
+    #                    'streaming_tv','streaming_movies'])
                     
+    df = df.select_dtypes(exclude='object')
+
     # rename binary encoded columns
     df.rename(columns={'gender_encoded': 'gender', 'partner_encoded': 'partner', \
                     'dependents_encoded': 'dependents', 'phone_service_encoded': 'phone_service', \
-                    'paperless_billing_encoded': 'paperless_billing', 'churn_encoded': 'churn'})
+                    'paperless_billing_encoded': 'paperless_billing'})
 
     return df   
 
