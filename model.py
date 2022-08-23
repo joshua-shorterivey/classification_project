@@ -8,7 +8,11 @@ from sklearn.metrics import classification_report, confusion_matrix, ConfusionMa
 from sklearn.linear_model import LogisticRegression
 
 def create_comp_chart():
+    """
+    purpose: to create a dataframe with an index reflecting compuation metrics for future models
 
+    returns: a pandas dataframe with appropriately set index
+    """
     statistics = ['Accuracy/Score',
     'True Positives' , 'False Postives', 'True Negatives', 'False Negatives', \
     'TPR/Recall', 'False Positive Rate', 'True Negative Rate', 'False Negative Rate', \
@@ -19,9 +23,14 @@ def create_comp_chart():
 
 def compute_metrics(model, X_df, y_df):
     """
-    Takes in a model, the big X, and little y and performs model fit,\ evalution, and compute operations for the titanic data set. 
-    
-    Returns: none
+    purpose: function executes performs computations to produce evaulation metrics for a given model
+
+    inputs: 
+        model: a model that has been previous fit to spec
+        X_df: a dataframe featuring the X subset of data for evaluation
+        y_df: a dataframe featuring the model target variable
+
+    Returns: a rounded pandas Series that can be adding to an evaulation metric comparison chart
     """
     # Make Predictions
     y_pred = model.predict(X_df)

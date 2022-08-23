@@ -5,11 +5,11 @@ from sklearn.impute import SimpleImputer
 
 def prep_telco(df):
     """
-    purpose: accepts pandas dataframe and prepares it for 
-    analysis according to spec
-    
+    purpose: accepts pandas dataframe and prepares it for analysis according to spec
     ---
-    returns: the prepared
+    inputs: pandas dataframe 
+    ---
+    returns: the prepared dataframe
     """
     df = df.drop(columns=['customer_id','internet_service_type_id', 'payment_type_id', 'contract_type_id'])
     
@@ -41,10 +41,11 @@ def prep_telco(df):
 
 def final_prep(df):
     """
-    purpose: final clean up of column names before feeding into models
-    
+    purpose: final clean up of column names before feeding into model
     ---
-    returns: the prepared
+    inputs: a pandas dataframe
+    ---
+    returns: the prepared dataframe
     """
     
     # drop columns that have been encoded/dummied
@@ -63,6 +64,11 @@ def final_prep(df):
 
 def split_data(df, target):
     """
+    purpose: splits up data into apporiate subsets for modeling
+    ---
+    inputs: a pandas dataframe, the target variable to perform the split on
+    ---
+    returns: train, validate, and test subsets in form of pandas dataframes
     """
     
     train, test = train_test_split(df, test_size=.2, random_state=514, stratify=df[target])

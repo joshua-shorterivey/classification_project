@@ -3,6 +3,13 @@ import os
 from env import host, user, password
 
 def get_telco_data():
+    """
+    purpose: initial acquisition and conversion of project data from codeup database
+    ---
+    inputs: none
+    ---
+    returns: pandas dataframe containing desired information
+    """
     filename = "telco.csv"
     
     if os.path.isfile(filename):
