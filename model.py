@@ -66,4 +66,5 @@ def compute_metrics(model, X_df, y_df):
     metrics = pd.Series([accuracy, true_positive, false_positive, true_negative, false_negative,\
                         recall, false_positive_rate, true_negative_rate, false_negative_rate, \
                         precision, f1_score, support_positive, support_negative])
+                        
     return metrics.round(2)

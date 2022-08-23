@@ -36,6 +36,7 @@ def prep_telco(df):
     df = pd.concat([df, dummy_telco], axis=1)
     df.total_charges = pd.to_numeric(df.total_charges.str.strip())
     
+    
     return df
 
 def final_prep(df):
