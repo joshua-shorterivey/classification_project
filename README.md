@@ -1,7 +1,7 @@
 # Classification Project
 ## Objective 
 > Analyze dataset featuring customer details of a telecummunications company  
-Utilize statistical models to aid in analysis and prodcution of actionable insights  
+Utilize statistical models to aid in analysis and production of actionable insights  
 Construct report summarizing findings
 
 ## Business Goals
@@ -11,9 +11,9 @@ Construct a ML classification model that accurately predicts customer churn.</br
 ## Deliverables
 > Final report outlining what steps were taken, why and what was the outcome?</br>
 > Key findings, recommendations, and takeaways from project</br>
-> .csv file laying out model predictions
+> `final_predictions.csv` file laying out model predictions
 > Python modules and jupyter notebooks needed to create the project  
-> Instructions on project reporducibility
+> Instructions on project reproducibility
 
 ## Data Dictionary
 |Target|Datatype|Definition|
@@ -121,9 +121,9 @@ Tidy up repository and notebooks for sharing and presentation
 > Present to audience of Code Up instructors and classmates
 
 ## Project Reproduction Requirements
-> Requires personal env.py file containing database credentials  
+> Requires personal `env.py` file containing database credentials  
 > Steps:
 * Fully examine this `README.md`
 * Download `acquire.py, model.py, prepary.py, and final_report.ipynb` to working directory
-* Create and add personal env.py file to directory. Requires user, password, and host variables
+* Create and add personal `env.py` file to directory. Requires user, password, and host variables
 * Run ``final_report.ipynb`
