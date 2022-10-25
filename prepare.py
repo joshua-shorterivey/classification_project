@@ -47,12 +47,7 @@ def final_prep(df):
     ---
     returns: the prepared dataframe
     """
-    
-    # drop columns that have been encoded/dummied
-    #df = df.drop(columns=['gender', 'senior_citizen', 'partner', 'dependents', 'phone'contract_type', 'payment_type', 'internet_service_type', 'multiple_lines', \
-    #                    'online_security', 'online_backup', 'device_protection','tech_support',\
-    #                    'streaming_tv','streaming_movies'])
-                    
+              
     df = df.select_dtypes(exclude='object')
 
     # rename binary encoded columns
