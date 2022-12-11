@@ -4,16 +4,23 @@
 Utilize statistical models to aid in analysis and production of actionable insights  
 Construct report summarizing findings
 
+<Details>
+<summary> Cancer </summary>
+<li> alksdjflkjasdf
+
+
+</Details>
+
 ## Business Goals
-> Find drivers for customer churn at Telco. Why are customers churning?</br>
-Construct a ML classification model that accurately predicts customer churn.</br>
+> Find drivers for customer churn at Telco. Why are customers churning?  
+Construct a ML classification model that accurately predicts customer churn.  
 
 ## Deliverables
-> Final report outlining what steps were taken, why and what was the outcome?</br>
-> Key findings, recommendations, and takeaways from project</br>
-> `final_predictions.csv` file laying out model predictions
-> Python modules and jupyter notebooks needed to create the project  
-> Instructions on project reproducibility
+> Final report outlining what steps were taken, why and what was the outcome  
+Key findings, recommendations, and takeaways from project  
+`final_predictions.csv` file laying out model predictions  
+Python modules and jupyter notebooks needed to create the project  
+Instructions on project reproducibility
 
 ## Data Dictionary
 |Target|Datatype|Definition|
