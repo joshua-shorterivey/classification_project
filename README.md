@@ -53,7 +53,7 @@ internet_service_type                 | 4225 non-null   object | customer intern
 
 
 ## Initial Questions and Hypotheses
-> Did customers that have churned pay higher monthly prices?   
+> ### Did customers that have churned pay higher monthly prices?   
 * ${\alpha}$ = .05
 
 * ${H_0}$: Customers that have churned pay equal or less than those that have not churned.
@@ -62,7 +62,7 @@ internet_service_type                 | 4225 non-null   object | customer intern
 
 * Conclusion: I rejected the null hypothesis after statistical testing supported the conclusion that churned customers did in fact pay higher monthly prices
 
-> Are longer tenured customers at less risk of churn?
+> ### Are longer tenured customers at less risk of churn?
 * ${\alpha}$ = .05
 
 * ${H_0}$: Customers that have churned show little to no difference in legnth of tenure.
