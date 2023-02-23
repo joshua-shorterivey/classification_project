@@ -38,7 +38,6 @@ def prep_telco(df):
     df = pd.concat([df, dummy_telco], axis=1)
     df.total_charges = pd.to_numeric(df.total_charges.str.strip())
     
-    
     return df
 
 def final_prep(df):
@@ -69,8 +68,17 @@ def split_data(df, target):
     returns: train, validate, and test subsets in form of pandas dataframes
     """
     
-    train, test = train_test_split(df, test_size=.2, random_state=514, stratify=df[target])
-    train, validate = train_test_split(train, test_size=.25, random_state=514, stratify=train[target])
+    train, test = train_test_split(
+                                df,
+                                test_size=.2, 
+                                random_state=514,
+                                stratify=df[target]
+                                )
+    train, validate = train_test_split(
+                                    train,
+                                    test_size=.25,
+                                    random_state=514,
+                                    stratify=train[target])
     
     #verify shapes of prepared df, train, validate, and test subsets
     print(f'Prepared df: {df.shape}')
